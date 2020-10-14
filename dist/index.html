@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="main.css" rel="stylesheet"></head>
+<body>
+	<nav id = "navbar">
+		<div class = "navsection"><a href = "#firstView"> Home </a> </div>
+		<div class = "navsection"> <a href = "#secondView"> Plan </a> </div>
+		<div class = "navsection"> <a href = "#thirdView"> Planned trips </a> </div>
+		<div class = "navsection"> <a href = #fourthView> Details </a></div>
+	</nav>
+	<section id = "firstView">
+		<h1 id = "title1">Plan your trip and check the weather in advance</h1>
+		<div id = "polaroids">
+			<img src="paris.png">
+			<img src="beirut.png">
+			<img src="london.png">
+			<img src="santorini.png">
+		</div>
+	</section>
+
+	<section id = "secondView">
+		<div id = "plan">
+			<form class = "planned">
+			<h1> Plan your trip </h1>
+  			<label> Location </label><br>
+  			<input type="text" id="location" placeholder = "City you want to visit"><br>
+  			<label> Visit Start Date </label><br>
+			<input type="text" id = "startDate" placeholder = "mm/dd/yyyy"><br>
+			<label> Visit End Date </label><br>
+			<input type="text" id = "endDate" placeholder = "mm/dd/yyyy"><br>
+			<button id = "search"> Search and Generate pdf </button>
+			<button id = "save" > Save Trip</button>
+		</form>
+		<div class = "planned">
+			<h1> Trip and Expected Weather Results</h1>
+			<p id = "country"></p>
+			<p id = "long"></p>
+			<p id = "lat"></p>
+			<p id = "daysCount"></p>
+			<p id = "tripLength"></p>
+			<table>
+				<tr>
+					<td>Today</td>
+					<td>Tomorrow</td>
+					<td>In 2 days</td>
+					<td>In 3 days</td>
+					<td>In 4 days</td>
+				</tr>
+				<tr>
+					<td id = "day1"></td>
+					<td id = "day2"></td>
+					<td id = "day3"></td>
+					<td id = "day4"></td>
+					<td id = "day5"></td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</section>
+
+	<section id = "thirdView">
+			<div class = "plannedTrips">
+				<h1 id = "planTitle"> Here's an image of the location you'll be visiting </h1>
+				<img id = "pixImage">
+			</div>
+			<div class = "plannedTrips">
+				<h3> Check your planned Trip(s) <button id = "clearTrip"> Clear Trips </button> </h3><br>
+				<ul></ul>
+
+			</div>
+	</section>
+
+	<section id = "fourthView">
+		<h1> You made your choice ? Awesome ! Now let's take things further. </h1>
+		<h3> Here are some things to plan and some websites that could help: </h3>
+		<figure id = "resources">
+			<div id = "docs">
+				<i class="material-icons">insert_drive_file</i>
+				<h2>Official Documents</h2>
+			</div>	
+			<div id = "ticket">
+  				<i class="material-icons">airplanemode_active</i>
+  				<h2>Plane Ticket</h2>
+			</div>
+			<div id = "hotel">
+				<i class="material-icons">hotel</i>
+				<h2>Hotel Accomodation</h2>
+			</div>
+			<div id = "budget">
+				<i class="material-icons">attach_money</i>
+				<h2>Budget</h2>
+			</div>
+			<div id = "insurance"> 
+				<i class="material-icons">accessibility</i>
+				<h2>Insurance</h2>
+			</div>
+		</figure>
+		<iframe id = "editor">Use this area to plan even more </iframe>
+	</section>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.65/pdfmake.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.65/vfs_fonts.js'></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/service-worker.js');
+			});
+		}
+	</script>
+<script src="main.js"></script></body>
+</html>
