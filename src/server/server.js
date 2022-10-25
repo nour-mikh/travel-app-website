@@ -16,7 +16,7 @@ app.use(express.static('dist'));
 const cors = require('cors');
 app.use(cors());
 
-const port = 8000;
+const port = 5000;
 const server = app.listen(port, listening);
 
 function listening(){
