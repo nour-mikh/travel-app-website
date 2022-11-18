@@ -110,23 +110,11 @@ define("./service-worker.js",['./workbox-64f1e998'], function (workbox) { 'use s
     "url": "./index.html",
     "revision": "27e24dd73c2baf0543309d5d4e141ba3"
   }, {
-    "url": "beirut.png",
-    "revision": "dc4401f1c951ba355d2674110a537ffc"
-  }, {
-    "url": "london.png",
-    "revision": "6c59b04f1d7782de864e6e35d675a07b"
-  }, {
     "url": "main.css",
     "revision": "a1b1d675512456e8633627b40d6f9be8"
   }, {
     "url": "main.js",
-    "revision": "b39a1762c328790a5e20df1583f8e253"
-  }, {
-    "url": "paris.png",
-    "revision": "a21f6952cb43180d2434881277287453"
-  }, {
-    "url": "santorini.png",
-    "revision": "dc7694364d32d5a658f4b99b9fb465ca"
+    "revision": "d1a87b6777ee3f585e7116a842ad74fc"
   }], {});
 
 });
